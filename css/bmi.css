@@ -1,0 +1,111 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* css variable */
+:root {
+  --background: #1eff96;
+}
+/* re-use  */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: var(--background);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bmi-wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bmi-inner {
+  width: 400px;
+  background-color: transparent;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 50px;
+}
+.result {
+  padding: 10px;
+}
+
+.bmi-result-box {
+  text-align: center;
+  position: relative;
+  height: 170px;
+  padding: 20px;
+  margin: auto;
+  background-color: transparent;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 50% 50% 0px 0px;
+  margin-bottom: 50px;
+}
+.bmi-result-box ::after {
+  position: absolute;
+  content: '';
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 15px;
+  width: 15px;
+  background-color: red;
+  border-radius: 50%;
+}
+.bmi-result-box::before {
+  position: absolute;
+  content: '';
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 90px;
+  width: 5px;
+  background-color: red;
+  border-radius: 40%;
+}
+.height-inputs,
+.weight-inputs {
+  margin: 20px 0;
+}
+.height-inputs label,
+.weight-inputs label {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.height-inputs input,
+.weight-inputs input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btns button {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+.calculateBtn {
+  background-color: green;
+  width: 48%;
+}
+.clearBtn {
+  background-color: red;
+  width: 48%;
+}
